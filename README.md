@@ -63,6 +63,25 @@ The model performance was evaluated using:
 * Use predictive models for demand forecasting.
 * Improve inventory planning based on seasonal demand patterns.
 
+  ## Dataset
+
+The dataset used in this project is the Global Superstore dataset obtained from Kaggle.
+
+It contains retail transaction data including:
+- Order date
+- Product category
+- Sales
+- Profit
+- Discount
+- Region and customer segment
+
+## Project Structure
+
+data/ → dataset used for training  
+notebooks/ → Jupyter notebook containing analysis and ML model  
+reports/ → project documentation and presentation  
+README.md → project overview
+
 ## Author
 
 Avinash Madhu
