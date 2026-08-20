@@ -35,26 +35,45 @@ The dataset contains retail transaction data including:
 4. Training machine learning models
 5. Evaluating model performance
 
-## Machine Learning Models Used
+##  Machine Learning Model
 
-* Linear Regression
-* Random Forest Regressor
+### Random Forest Regressor
 
-## Model Evaluation Metrics
+A Random Forest Regressor was used to predict sales based on historical transaction and engineered features.
 
-The model performance was evaluated using:
+The model was trained using an **80/20 train-test split**.
 
-* R² Score
-* Mean Absolute Error (MAE)
-* Root Mean Squared Error (RMSE)
-* Mean Absolute Percentage Error (MAPE)
+### Model Configuration
+
+- **`n_estimators`:** 50
+- **`max_depth`:** 10
+- **`max_features`:** `sqrt`
+- **`random_state`:** 42
+  
+##  Model Evaluation
+
+The model was evaluated on the test dataset using:
+
+- **R² Score:** 0.113
+- **RMSE:** 491.99
+- **MAPE:** 5.4990 (reported by scikit-learn as a ratio)
+
+The notebook also includes:
+
+- Actual vs. predicted sales visualization
+- Residual analysis
+- Prediction error distribution
 
 ## Key Insights
 
-* Technology products generate the highest sales revenue.
-* Discounts have a significant impact on profit margins.
-* Sales vary across regions and customer segments.
-* Seasonal trends affect sales performance.
+* Data cleaning and preprocessing
+* Exploratory Data Analysis (EDA)
+* Feature engineering from date variables
+* Encoding categorical variables
+* Train-test split using an 80/20 ratio
+* Training a Random Forest Regressor
+* Model evaluation using R², RMSE, and MAPE
+* Residual and prediction error analysis
 
 ## Business Recommendations
 
