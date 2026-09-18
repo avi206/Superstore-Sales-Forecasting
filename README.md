@@ -80,10 +80,17 @@ The notebook also includes actual-versus-predicted visualizations, residual anal
 Superstore-Sales-Forecasting/
 ├── data/                 # Source data
 ├── notebooks/            # Analysis and modeling notebook(s)
-├── reports/              # Generated reports and visual outputs
+├── reports/              # Project report and presentation
 ├── requirements.txt      # Python dependencies
 └── README.md             # Project documentation
 ```
+
+## Project Resources
+
+- [Forecasting notebook](notebooks/superstore_forecasting.ipynb)
+- [Project report](reports/Sales%20Forecasting%20using%20Machine%20Learning.docx)
+- [Project presentation](reports/sales_forecasting_with_graph_slides.pptx)
+- [Source dataset](data/superstore.csv)
 
 ## Getting Started
 
