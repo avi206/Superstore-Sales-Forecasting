@@ -1,97 +1,112 @@
-# Superstore Sales Forecasting using Machine Learning
+# Superstore Sales Forecasting with Machine Learning
+
+An end-to-end machine-learning project that explores Global Superstore sales data and uses a Random Forest regression model to estimate retail sales. The workflow combines data preparation, exploratory analysis, feature engineering, model evaluation, and prediction-error analysis.
 
 ## Project Overview
 
-This project predicts future retail sales using machine learning techniques on the Global Superstore dataset.
+The goal is to turn historical retail transactions into practical sales insights and a reproducible baseline forecasting workflow. The analysis examines sales across product categories, locations, and other operational dimensions before training and evaluating a regression model.
 
-The objective is to analyze historical sales data, identify patterns influencing revenue, and build predictive models that help businesses forecast demand and improve decision-making.
+## Tools and Libraries
 
-## Tools Used
-
-* Python
-* Pandas
-* NumPy
-* Scikit-learn
-* Matplotlib
-* Jupyter Notebook
+- Python
+- Pandas and NumPy
+- Scikit-learn
+- Matplotlib and Seaborn
+- Jupyter Notebook
 
 ## Dataset
 
-Dataset: **Global Superstore Dataset**
+This project uses the **Global Superstore** dataset, which includes retail transaction details such as:
 
-The dataset contains retail transaction data including:
+- Order and ship dates
+- Product category and sub-category
+- Sales, profit, quantity, and discount
+- Region, customer segment, and shipping mode
 
-* Order Date and Ship Date
-* Product Category and Sub-Category
-* Sales, Profit, Quantity, Discount
-* Region and Customer Segment
-* Shipping Mode
+## Workflow
 
-## Key Analysis Performed
+1. Clean and prepare the source data.
+2. Explore sales patterns and business performance.
+3. Create features from date and categorical variables.
+4. Split the prepared data into training and test sets (80/20).
+5. Train a Random Forest Regressor.
+6. Evaluate performance and inspect prediction errors.
 
-- Data cleaning and preprocessing
-- Exploratory Data Analysis (EDA)
-- Feature engineering from date variables
-- Encoding categorical variables
-- Train-test split using an 80/20 ratio
-- Training a Random Forest Regressor
-- Model evaluation using R², RMSE, and MAPE
-- Residual and prediction error analysis
-  
-##  Machine Learning Model
+## Model
 
 ### Random Forest Regressor
 
-A Random Forest Regressor was used to predict sales based on historical transaction and engineered features.
+The final model estimates sales using historical transaction data and engineered features.
 
-The model was trained using an **80/20 train-test split**.
+| Parameter | Value |
+|---|---:|
+| `n_estimators` | 50 |
+| `max_depth` | 10 |
+| `max_features` | `sqrt` |
+| `random_state` | 42 |
+| Train/test split | 80/20 |
 
-### Model Configuration
+## Evaluation
 
-- **`n_estimators`:** 50
-- **`max_depth`:** 10
-- **`max_features`:** `sqrt`
-- **`random_state`:** 42
-  
-##  Model Evaluation
+The model is evaluated on the test dataset using standard regression metrics:
 
-The model was evaluated on the test dataset using:
+| Metric | Result |
+|---|---:|
+| R² Score | 0.113 |
+| RMSE | 491.99 |
+| MAPE | 5.4990 |
 
-- **R² Score:** 0.113
-- **RMSE:** 491.99
-- **MAPE:** 5.4990 (reported by scikit-learn as a ratio)
+The notebook also includes actual-versus-predicted visualizations, residual analysis, and a prediction-error distribution.
 
-The notebook also includes:
+> The R² result indicates that this baseline model has limited predictive strength. It is useful as a starting point for further feature engineering, tuning, and validation.
 
-- Actual vs. predicted sales visualization
-- Residual analysis
-- Prediction error distribution
+## Key Insights
 
-##  Key Insights
+- **Technology** generated the highest total sales (approximately **4.74M**).
+- **New York City** recorded the highest sales among the analyzed cities (approximately **256K**).
+- Feature-importance analysis helps identify variables that contribute most to the model.
+- The baseline model leaves room for stronger features and more robust validation.
 
-* **Technology** generated the highest total sales at **4.74M**, followed by Furniture and Office Supplies.
-* **New York City** recorded the highest sales among the cities analyzed, with approximately **256K** in sales.
-* **Feature importance analysis** was used to identify influential variables and reduce the feature set for modeling.
-* The final Random Forest model achieved an **R² score of 0.113** on the test data, indicating limited predictive strength.
+## Recommendations
 
-##  Business Recommendations
+- Prioritize inventory and sales planning for high-performing product categories.
+- Give additional attention to high-performing markets such as New York City.
+- Improve future iterations with richer features, hyperparameter tuning, and stronger validation strategies.
+- Use feature importance to focus refinement efforts on the most informative variables.
 
-* **Prioritize high-performing categories:** Technology generated the highest sales, so inventory and sales planning can give greater attention to this category.
-* **Focus on high-performing markets:** New York City recorded the highest sales among the cities analyzed, making it a potential priority market for sales and inventory planning.
-* **Improve model performance:** The final Random Forest model achieved an R² score of 0.113, so further feature engineering, hyperparameter tuning, and stronger validation strategies could improve predictive performance.
-* **Use feature importance for model refinement:** The identified influential features can be used to simplify the model and focus future iterations on the variables contributing most to predictions.
+## Repository Structure
 
-##  Project Structure
-
-```  
+```text
 Superstore-Sales-Forecasting/
-│
-├── data/
-├── notebooks/
-├── reports/
-├── requirements.txt
-└── README.md
-```  
+├── data/                 # Source data
+├── notebooks/            # Analysis and modeling notebook(s)
+├── reports/              # Generated reports and visual outputs
+├── requirements.txt      # Python dependencies
+└── README.md             # Project documentation
+```
+
+## Getting Started
+
+1. Clone this repository.
+2. Create and activate a Python virtual environment.
+3. Install the dependencies:
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. Start Jupyter Notebook:
+
+   ```bash
+   jupyter notebook
+   ```
+
+5. Open the notebook in the `notebooks/` directory and run the cells in order.
+
 ## Author
 
-Avinash Madhu
+**Avinash Madhu**  
+Data Analyst | Business Analytics
+
+- [GitHub](https://github.com/avi206)
+- [LinkedIn](https://www.linkedin.com/in/avinash-madhu-847429203)
